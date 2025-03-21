@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - Placement Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS -->
+    <style>
+        body {
+            background-image: url("./keyboard-with-keys-house-model-white-background.jpg");
+            background-color: #f8f9fa;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .heading img {
+            width: 50px;
+        }
+        .heading h1 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .details label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .details input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .details button {
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .details button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="heading">
+            <img src="https://gyaanarth.com/wp-content/uploads/2022/05/cbit3.jpg" alt="CBIT Logo">
+            <h1>CBIT Placement Portal</h1>
+            <p>Chaitanya Bharathi Institute of Technology</p>
+        </div>
+        <hr>
+        <h2 id="formTitle">Login</h2>
+        <div id="loginForm" class="details">
+            <label for="loginEmail">Email:</label>
+            <input type="email" id="loginEmail" name="email" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <button type="submit" onclick="validateLogin()">Login</button>
+        </div>
+
+        <div id="signupForm" class="details" style="display: none;">
+            <h2>Sign Up</h2>
+            <label for="signupName">Full Name:</label>
+            <input type="text" id="signupName" name="name" required>
+            <label for="signupNumber">Roll Number:</label>
+            <input type="number" id="signupNumber" name="number" required pattern="^\d{10}$" title="Please enter a valid 10-digit phone number.">
+            <label for="signupEmail">Email:</label>
+            <input type="email" id="signupEmail" name="email" required>
+            <label for="signupPassword">Password:</label>
+            <input type="password" id="signupPassword" name="password" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmpassword" required>
+            <button type="submit" onclick="validateSignup()">Sign Up</button>
+        </div>
+
+        <p id="toggleLink" style="cursor: pointer; color: blue;">Don't have an account? Sign up here!</p>
+    </div>
+
+    <script>
+        function validateLogin() {
+            let email = document.getElementById("loginEmail").value;
+            let password = document.getElementById("loginPassword").value;
+
+            // Regular expression for email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email === "" || password === "") {
+                alert("Please enter both email and password.");
+                return false;
+            } else if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            } else {
+                alert("Login successful!");
+                window.location.href = "home.html"; // Redirect to home page after login
+            }
+        }
+
+        function validateSignup() {
+            let password = document.getElementById("signupPassword").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match! Please try again.");
+                return false;
+            } else {
+                alert("Account created successfully!");
+                window.location.href = "login.html"; // Redirect to login page after sign-up
+            }
+        }
+
+        document.getElementById("toggleLink").addEventListener("click", function() {
+            const loginForm = document.getElementById("loginForm");
+            const signupForm = document.getElementById("signupForm");
+            const formTitle = document.getElementById("formTitle");
+
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+                signupForm.style.display = "none";
+                formTitle.textContent = "Login";
+                this.textContent = "Don't have an account? Sign up here!";
+            } else {
+                loginForm.style.display = "none";
+                signupForm.style.display = "block";
+                formTitle.textContent = "Sign Up";
+                this.textContent = "Already have an account? Log in here!";
+            }
+        });
+    </script>
+</body>
+</html>

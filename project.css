@@ -1,0 +1,180 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url("./cbit.jpeg.jpg"); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .heading-overlay {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 20px auto;
+  }
+  
+  .club-card {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #ffffff;
+    transition: transform 0.2s;
+  }
+  
+  .club-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .club-title {
+    font-size: 1.5em;
+    color: black;
+  }
+  
+  .club-description {
+    font-size: 1em;
+    color: #6c757d;
+  }
+  
+  .club3 {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+  
+  .club3:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .sub-clubs {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sub-clubs h2 {
+    text-align: center;
+  }
+  
+  .sub-clubs ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sub-clubs li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sub-clubs li:last-child {
+    border-bottom: none;
+  }
+  
+  .back-link {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .sub-club-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+  }
+  
+  .sub-club-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .sub-club-description {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .main {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .header-buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .header-buttons a {
+    margin-left: 10px;
+  }
+  
+  .footer {
+    background-color: white; 
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info i {
+    font-size: 1.5rem;
+    color: black;
+    margin-right: 10px;
+  }
+  
+  footer {
+    background-color: #f1f1f1; 
+    padding: 40px 0;
+    margin-top: 50px;
+  }
